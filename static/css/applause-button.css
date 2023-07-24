@@ -7,9 +7,9 @@ div.applause_button {
     & div.style-root {
       /* We are forced to use important because applause-button has defined
        * style on the element */
-      fill: maroon !important;
-      stroke: maroon !important;
-      color: maroon !important;
+      fill: #398334  !important;
+      stroke: #398334  !important;
+      color: #398334  !important;
     }
   }
 }

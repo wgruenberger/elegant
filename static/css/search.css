@@ -11,7 +11,7 @@
     margin: 10px 0 0 0;
   }
   & p.lunr-result-fail {
-    color: maroon;
+    color: #398334;
     text-align: center;
     font-size: rfs(1.125rem);
   }
