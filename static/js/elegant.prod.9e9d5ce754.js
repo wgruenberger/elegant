@@ -82,11 +82,10 @@ jazzModalContents["contact"] = {title: "Contact and Abo", body: "<p>You want to 
     "        <p>I am also thrilled to hear from you if you want to ask or tell me anything personally.<br>Just shoot me an <a href=\"&#x6D;&#x61;&#x69;&#x6C;&#x74;&#x6F;&#x3A;&#x62;&#x6C;&#x6F;&#x67;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x40;&#x6A;&#x61;&#x7A;&#x7A;&#x6E;&#x65;&#x77;&#x62;&#x69;&#x65;&#x2E;&#x63;&#x6F;&#x6D;\">&#x65;&#x2D;&#x6D;&#x61;&#x69;&#x6C;</a>.</p>\n" +
     "        <p>I am not interested in the private data of my readers, so I do not collect e-mail addresses for a newsletter or the like.</p>"}
 $('#modal_jazznewbie').on('show', function (event) {
-  var button = $(event.relatedTarget);
+  var button = $(event.target);
   var key = button.data('contentkey');
-  console.log(button)
+  console.log(key, button, button.data())
   console.log(event.target)
-  console.log(event.relatedTarget, button.data())
   var content = jazzModalContents[key];
   if (!content)
   {
