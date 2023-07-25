@@ -85,7 +85,7 @@ $('#modal_jazznewbie').on('show', function (event) {
   var button = $(event.target);
   var key = button.data('contentkey');
   console.log(key, button, button.data())
-  console.log(event.target)
+  console.log(event)
   var content = jazzModalContents[key];
   if (!content)
   {
