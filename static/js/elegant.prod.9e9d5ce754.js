@@ -100,5 +100,5 @@ $('#modal_jazznewbie').on('show', function (event) {
     return;
   }
   modal.find('.modal-title').text(content.title);
-  modal.find('.modal-body').text(content.body);
+  modal.find('.modal-body').html(content.body);
 });
