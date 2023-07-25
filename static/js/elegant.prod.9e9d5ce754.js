@@ -84,6 +84,7 @@ jazzModalContents["contact"] = {title: "Contact and Abo", body: "<p>You want to 
 $('#modal_jazznewbie').on('show', function (event) {
   var button = $(event.relatedTarget);
   var key = button.data('contentkey');
+  console.log(key, jazzModalContents)
   var modal = $(this)
   modal.find('.modal-title').text(jazzModalContents[key].title);
   modal.find('.modal-body').text(jazzModalContents[key].body);
