@@ -112,6 +112,7 @@ $('.jazz_modal_opener').on('click', function (event) {
 
 });
 $('#modal_jazznewbie').on('show', function (event) {
+  var modal = $(event.target);
   var key = modal.data().modal.options.contentkey;
 
   var content = jazzModalContents[key];
