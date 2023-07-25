@@ -82,13 +82,17 @@ jazzModalContents["contact"] = {title: "Contact and Abo", body: "<p>You want to 
     "        <p>I am also thrilled to hear from you if you want to ask or tell me anything personally.<br>Just shoot me an <a href=\"&#x6D;&#x61;&#x69;&#x6C;&#x74;&#x6F;&#x3A;&#x62;&#x6C;&#x6F;&#x67;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x40;&#x6A;&#x61;&#x7A;&#x7A;&#x6E;&#x65;&#x77;&#x62;&#x69;&#x65;&#x2E;&#x63;&#x6F;&#x6D;\">&#x65;&#x2D;&#x6D;&#x61;&#x69;&#x6C;</a>.</p>\n" +
     "        <p>I am not interested in the private data of my readers, so I do not collect e-mail addresses for a newsletter or the like.</p>"}
 $('.jazz_modal_opener').on('click', function (event) {
-  console.log(event.target, $(event.target).data())
-  return;
-  var modal = $(this)
+  var key = $(event.target).data("contentkey");
 
-  var button = modal.data('relatedTarget');
-  var key = button.data('contentkey');
-  console.log(key, button, button.data())
+  console.log(key);
+
+  $("#modal_jazznewbie").modal({contentkey: key, show: true});
+
+
+});
+$('#modal_jazznewbie').on('show', function (event) {
+  console.log($(event.target).data())
+  return;
   var content = jazzModalContents[key];
   if (!content)
   {
@@ -96,4 +100,4 @@ $('.jazz_modal_opener').on('click', function (event) {
   }
   modal.find('.modal-title').text(content.title);
   modal.find('.modal-body').text(content.body);
-})
+});
