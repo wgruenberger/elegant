@@ -1,17 +1,28 @@
-<div class="modal fade w_contact" id="modal_w_contact" tabindex="-1" role="dialog">
+<div class="modal fade jazznewbie" id="modal_jazznewbie" tabindex="-1" role="dialog">
   <div class="modal-dialog  modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h5 class="modal-title">Contact and Abo</h5>
+        <h5 class="modal-title"></h5>
       </div>
       <div class="modal-body">
-        <p>You want to stay in touch and see how my story continues?<br>Subscribing to the feed of my blog is an easy and privacy-friendly way to stay up-to-date.</p>
-        <p>I am also thrilled to hear from you if you want to ask or tell me anything personally.<br>Just shoot me an <a href="&#x6D;&#x61;&#x69;&#x6C;&#x74;&#x6F;&#x3A;&#x62;&#x6C;&#x6F;&#x67;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x40;&#x6A;&#x61;&#x7A;&#x7A;&#x6E;&#x65;&#x77;&#x62;&#x69;&#x65;&#x2E;&#x63;&#x6F;&#x6D;">&#x65;&#x2D;&#x6D;&#x61;&#x69;&#x6C;</a>.</p>
-        <p>I am not interested in the private data of my readers, so I do not collect e-mail addresses for a newsletter or the like.</p>
+
       </div>
     </div>
   </div>
 </div>
+<script>
+  var modalContents = {};
+  modalContents["contact"] = {title: "Contact and Abo", body: "<p>You want to stay in touch and see how my story continues?<br>Subscribing to the feed of my blog is an easy and privacy-friendly way to stay up-to-date.</p>\n" +
+      "        <p>I am also thrilled to hear from you if you want to ask or tell me anything personally.<br>Just shoot me an <a href=\"&#x6D;&#x61;&#x69;&#x6C;&#x74;&#x6F;&#x3A;&#x62;&#x6C;&#x6F;&#x67;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x40;&#x6A;&#x61;&#x7A;&#x7A;&#x6E;&#x65;&#x77;&#x62;&#x69;&#x65;&#x2E;&#x63;&#x6F;&#x6D;\">&#x65;&#x2D;&#x6D;&#x61;&#x69;&#x6C;</a>.</p>\n" +
+      "        <p>I am not interested in the private data of my readers, so I do not collect e-mail addresses for a newsletter or the like.</p>"}
+  $('#modal_jazznewbie').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget);
+    var key = button.data('contentkey');
+    var modal = $(this)
+    modal.find('.modal-title').text(modalContents[key].title);
+    modal.find('.modal-body').text(modalContents[key].body);
+  })
+</script>
