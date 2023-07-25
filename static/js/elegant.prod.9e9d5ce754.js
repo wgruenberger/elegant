@@ -112,7 +112,6 @@ $('.jazz_modal_opener').on('click', function (event) {
 
 });
 $('#modal_jazznewbie').on('show', function (event) {
-  var modal = $(event.target);
   var key = modal.data().modal.options.contentkey;
 
   var content = jazzModalContents[key];
@@ -125,6 +124,7 @@ $('#modal_jazznewbie').on('show', function (event) {
 });
 
 $('#modal_jazznewbie').on('hidden', function (event) {
+  var modal = $(event.target);
   modal.find('.modal-title').text("");
   modal.find('.modal-body').html("");
 });
