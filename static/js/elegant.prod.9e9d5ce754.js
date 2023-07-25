@@ -83,7 +83,7 @@ jazzModalContents["contact"] = {title: "Contact and Abo",
     "<p>I am also thrilled to hear from you if you want to ask or tell me anything personally.<br>Just shoot me an <a href=\"&#x6D;&#x61;&#x69;&#x6C;&#x74;&#x6F;&#x3A;&#x62;&#x6C;&#x6F;&#x67;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x40;&#x6A;&#x61;&#x7A;&#x7A;&#x6E;&#x65;&#x77;&#x62;&#x69;&#x65;&#x2E;&#x63;&#x6F;&#x6D;\">&#x65;&#x2D;&#x6D;&#x61;&#x69;&#x6C;</a>.</p>\n" +
     "<p>I am not interested in the private data of my readers, so I do not collect e-mail addresses for a newsletter or the like.</p>"};
 jazzModalContents["impress"] = {title: "Impress",
-  body: "h3>Information in accordance with german TMG §5</h3>\n" +
+  body: "<h3>Information in accordance with german TMG §5</h3>\n" +
     "<p>Werner Grünberger<br>\n" +
     "84547 Emmerting<br>\n" +
     "GERMANY</p>\n" +
@@ -122,4 +122,9 @@ $('#modal_jazznewbie').on('show', function (event) {
   }
   modal.find('.modal-title').text(content.title);
   modal.find('.modal-body').html(content.body);
+});
+
+$('#modal_jazznewbie').on('hidden', function (event) {
+  modal.find('.modal-title').text("");
+  modal.find('.modal-body').html("");
 });
