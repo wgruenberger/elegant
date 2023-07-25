@@ -91,8 +91,8 @@ $('.jazz_modal_opener').on('click', function (event) {
 
 });
 $('#modal_jazznewbie').on('show', function (event) {
-  console.log($(event.target).data())
-  return;
+  var key = $(event.target).data("options").contentkey;
+  console.log(key);
   var content = jazzModalContents[key];
   if (!content)
   {
