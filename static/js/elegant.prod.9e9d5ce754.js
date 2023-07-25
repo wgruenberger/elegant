@@ -127,5 +127,7 @@ $('#modal_jazznewbie').on('show', function (event) {
 });
 
 $('#modal_jazznewbie').on('hidden', function (event) {
-  fillModal(event.target, "empty");
+  var modal = $(event.target);
+  fillModal(modal, "empty");
+  modal.data("modal", false);
 });
