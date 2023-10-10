@@ -24,6 +24,7 @@
 {% if SITE_DESCRIPTION %}
 <meta property="og:description" content="{{ SITE_DESCRIPTION|e }}" />
 <meta name="twitter:description" content="{{ SITE_DESCRIPTION|e }}">
+<meta name="description" content="{{ SITE_DESCRIPTION|e }}" />
 {% endif %}
 <meta name="keywords" content="{% for tag, _ in tags|sort %} {{ tag }}, {% endfor %}{% for category, _ in categories|sort %} {{ category }}, {% endfor %}" />
 {% endblock meta_tags_in_head %}

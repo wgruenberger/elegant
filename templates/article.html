@@ -18,6 +18,10 @@
 {% if article.tags or article.category or article.keywords %}
 <meta name="keywords" content="{{ [article.tags|join(', '), article.category, article.keywords]|join(', ') }}" />
 {% endif %}
+{% if article.summary %}
+<meta name="description" content="{{ article.summary }}" />
+{% endif %}
+
 
 {% from '_includes/smo_metadata.html' import smo_metadata with context %}
 {{ smo_metadata(article) }}

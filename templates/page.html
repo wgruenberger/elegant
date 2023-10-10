@@ -15,6 +15,9 @@
 {% if page.keywords %}
 <meta name="keywords" content="{{ page.keywords }}" />
 {% endif %}
+{% if page.summary %}
+<meta name="description" content="{{ page.summary }}" />
+{% endif %}
 
 {% from '_includes/smo_metadata.html' import smo_metadata with context %}
 {{ smo_metadata(page) }}
