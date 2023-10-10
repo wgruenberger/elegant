@@ -81,7 +81,7 @@ var jazzModalContents = {};
 jazzModalContents["empty"] = {title: "", body: ""};
 jazzModalContents["error"] = {title: "ERROR", body: "Sorry, there was an error."};
 jazzModalContents["contact"] = {title: "Contact and Abo",
-  body: "<p>You want to stay in touch and see how my story continues?<br>Subscribing to the feed of my blog is an easy and privacy-friendly way to stay up-to-date.</p>\n" +
+  body: "<p>You want to stay in touch and see how my story continues?<br>Subscribing to the <a href=\"https://www.jazznewbie.com/feeds/all.atom.xml\">feed of my blog</a> is an easy and privacy-friendly way to stay up-to-date.</p>\n" +
     "<p>I am also thrilled to hear from you if you want to ask or tell me anything personally.<br>Just shoot me an <a href=\"&#x6D;&#x61;&#x69;&#x6C;&#x74;&#x6F;&#x3A;&#x62;&#x6C;&#x6F;&#x67;&#x69;&#x6E;&#x70;&#x75;&#x74;&#x40;&#x6A;&#x61;&#x7A;&#x7A;&#x6E;&#x65;&#x77;&#x62;&#x69;&#x65;&#x2E;&#x63;&#x6F;&#x6D;\">&#x65;&#x2D;&#x6D;&#x61;&#x69;&#x6C;</a>.</p>\n" +
     "<p>I am not interested in the private data of my readers, so I do not collect e-mail addresses for a newsletter or the like.</p>"};
 jazzModalContents["impress"] = {title: "Impress",
