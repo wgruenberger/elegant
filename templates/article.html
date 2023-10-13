@@ -18,7 +18,7 @@
 {% if article.tags or article.category or article.keywords %}
 <meta name="keywords" content="{{ [article.tags|join(', '), article.category, article.keywords]|join(', ') }}" />
 {% endif %}
-{% if article and article.status == "published %}
+{% if article and article.status == "published" %}
 <meta name="robots" content="index,follow,archive" />
 {% else %}
 <meta name="robots" content="noindex,nofollow,noarchive">
