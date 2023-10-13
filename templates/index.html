@@ -27,6 +27,7 @@
 <meta name="description" content="{{ SITE_DESCRIPTION|e }}" />
 {% endif %}
 <meta name="keywords" content="{% for tag, _ in tags|sort %} {{ tag }}, {% endfor %}{% for category, _ in categories|sort %} {{ category }}, {% endfor %}" />
+<meta name="robots" content="index,follow,archive" />
 {% endblock meta_tags_in_head %}
 
 {% block content %}

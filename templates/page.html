@@ -15,8 +15,10 @@
 {% if page.keywords %}
 <meta name="keywords" content="{{ page.keywords }}" />
 {% endif %}
-{% if page.summary %}
-<meta name="description" content="{{ page.summary }}" />
+{% if page and page.status == "published %}
+<meta name="robots" content="index,follow,archive" />
+{% else %}
+<meta name="robots" content="noindex,nofollow,noarchive">
 {% endif %}
 
 {% from '_includes/smo_metadata.html' import smo_metadata with context %}
