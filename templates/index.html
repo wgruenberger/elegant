@@ -57,7 +57,7 @@
         {% endif %}
         <div class="{{ css_class }}">
             <header>
-                <h1 id="about-me">{{ landing_page.page.title }}</h1>
+                <h2 id="about-me">{{ landing_page.page.title }}</h2>
             </header>
             <div class="article-content">
                 {{ landing_page.page.content }}
@@ -72,7 +72,7 @@
         {% endif %}
         <div class="{{ css_class }}">
             <header>
-            <h1 id="my-projects">{{ PROJECTS_TITLE }}</h1>
+            <h2 id="my-projects">{{ PROJECTS_TITLE }}</h2>
             </header>
             {% for project in PROJECTS %}
             <ul class="list-projects">
@@ -94,7 +94,7 @@
     <div class="row-fluid">
         <div class="{{ css_class }}">
             <header>
-            <h1 id="recent-posts">Recent Posts <a id="allposts" href="{{ SITEURL }}/{{ ARCHIVES_URL }}">all posts</a></h1>
+            <h2 id="recent-posts">Recent Posts <a id="allposts" href="{{ SITEURL }}/{{ ARCHIVES_URL }}">all posts</a></h2>
             </header>
         <div class="recent-posts">
             {% for article in articles %}
